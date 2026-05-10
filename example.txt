@@ -1,1 +1,1 @@
-hello new horizon
+Line from feature-2
