@@ -1,0 +1,32 @@
+docker --version
+docker run hello-world
+
+cd docker_demo
+cd ..
+pwd
+ls
+dir
+
+docker build -t docker-demo .-building image
+docker run -d -p 5000:5000 docker-demo -running container
+docker run -d --name demo-container -p 5000:5000 docker-demo -running container with specific name
+
+
+docker ps -list all running containers 
+docker ps -a -list all containers 
+docker images
+
+docker stop <container_id_or_name>
+docker rm <container_id_or_name>
+
+docker rename old_name new_name
+docker tag docker-demo yourusername/docker-demo
+
+docker save -o docker-demo.tar docker-demo
+docker load -i docker-demo.tar
+
+docker push yourusername/docker-demo
+docker run -d -p 5000:5000 yourusername/docker-demo
+
+docker logs <container_id>
+docker exec -it <container_id> /bin/bash
