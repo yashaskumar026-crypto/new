@@ -1,13 +1,7 @@
 pipeline {
     agent any
 
-    stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/your-username/simple-html-app.git'
-            }
-        }
 
         stage('Build') {
             steps {
