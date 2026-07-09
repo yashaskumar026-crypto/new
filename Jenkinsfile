@@ -34,7 +34,7 @@ pipeline {
                 sh '''
                 docker stop html-container || true
                 docker rm html-container || true
-                docker run -d --name html-container -p 8080:80 $IMAGE_NAME
+                docker run -d --name html-container -p 8081:80 $IMAGE_NAME
                 '''
             }
         }
